@@ -2,9 +2,12 @@
   "name": "crack-the-coding-interview",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node" : ">=10.10.3"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/MiLandry/crack-the-coding-interview/issues"
   },
-  "homepage": "https://github.com/MiLandry/crack-the-coding-interview#readme"
+  "homepage": "https://github.com/MiLandry/crack-the-coding-interview#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
 }

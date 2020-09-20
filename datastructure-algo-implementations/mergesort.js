@@ -1,11 +1,12 @@
 //its a recursive implementation, so solve the base case
 function mergeSort (arr)
 {
+
   if (arr.length === 0 || arr.length === 1) return arr
   const result = []
   const half = Math.ceil(arr.length / 2);
   const leftP = mergeSort(arr.splice(0, half))
-  const rightP = mergeSort(arr.splice(-half))
+  const rightP = mergeSort(arr)
 
   while (leftP.length || rightP.length)
   {
@@ -17,10 +18,12 @@ function mergeSort (arr)
       result.push(...leftP)
       break
     }
-    const smaller = (leftP[0] < rightP[0])  ? leftP.pop() : rightP.pop()
+    const smaller = (leftP[0] < rightP[0])  ? leftP.shift() : rightP.shift()
     result.push(smaller)
   }
   return result
 }
 
-console.log('test', mergeSort([3,2,1,55]))
+// console.log('test', mergeSort([3,2,1,5]))
+
+module.exports = mergeSort;

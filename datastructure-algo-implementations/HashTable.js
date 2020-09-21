@@ -33,7 +33,7 @@ class HashTable
     else
     {
       let keyAlreadyExists = false
-      for (pair of bucket)
+      for (const pair of bucket)
       {
         // if the bucket contains this key already, override its value
         if (pair[0] === key)
@@ -53,8 +53,8 @@ class HashTable
   lookup(key)
   {
     const index = this.hash(key, this.array.length)
-    const bucket = array[index]
-    for (pair in bucket)
+    const bucket = this.array[index]
+    for (const pair of bucket)
     {
       if (pair[0] === key) return bucket[0][1]
     }

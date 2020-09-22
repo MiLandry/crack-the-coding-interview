@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it adds 1`] = `
+MySet {
+  "data": Object {
+    "a": true,
+  },
+}
+`;
+
+exports[`it adds 2 1`] = `
+MySet {
+  "data": Object {
+    "a": true,
+  },
+}
+`;
+
+exports[`it adds 2 different 1`] = `
+MySet {
+  "data": Object {
+    "a": true,
+    "b": true,
+  },
+}
+`;
+
+exports[`remove 1`] = `
+MySet {
+  "data": Object {
+    "b": true,
+  },
+}
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it adds 1`] = `
+LinkedListNode {
+  "data": "a",
+  "next": LinkedListNode {
+    "data": "b",
+    "next": LinkedListNode {
+      "data": "c",
+      "next": null,
+    },
+  },
+}
+`;
+
+exports[`it removes 1`] = `
+LinkedListNode {
+  "data": "b",
+  "next": LinkedListNode {
+    "data": "c",
+    "next": null,
+  },
+}
+`;
+
+exports[`it removes 2 1`] = `
+LinkedListNode {
+  "data": "a",
+  "next": LinkedListNode {
+    "data": "c",
+    "next": null,
+  },
+}
+`;
+
+exports[`it removes 3 1`] = `
+LinkedListNode {
+  "data": "a",
+  "next": LinkedListNode {
+    "data": "b",
+    "next": null,
+  },
+}
+`;

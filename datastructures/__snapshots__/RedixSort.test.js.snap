@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it sorts 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+]
+`;
+
+exports[`it sorts 2`] = `
+Array [
+  1,
+  1,
+  2,
+  7,
+]
+`;

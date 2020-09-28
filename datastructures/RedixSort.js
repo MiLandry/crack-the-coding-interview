@@ -4,11 +4,11 @@
 
 const rs = function (arr)
 {
-  const max = Math.max(arr)
+  const max = Math.max(...arr)
 
   if (arr.length === 0|| arr.length === 1) return arr
   let temp = arr
-  for (let i = 0; max > 10**1; i++)
+  for (let i = 0; max > 10**i; i++)
   {
     temp = countingSort(temp, i + 1)
 
@@ -20,33 +20,38 @@ const rs = function (arr)
 const countingSort = function (arr, digit)
 {
   const count = Array(10).fill(0) //10 buckets to track digit count
-  const cumulativeCount
-  const startingIndex
-  const result
-  for (const e in arr)
-  {
-    count[e % 10**digit]++ //fill buckets
-  }
+  const cumulativeCount = []
+  let startingIndex = []
+  const result = []
+  arr.forEach(element => {
+    count[element % 10**digit]++ //fill buckets
+
+  });
+
 
   //calculate cumulativeCount so we can calculate startingIndex
-  for (let i = 0; i < count.length; i++) {
-    cumulativeCount[i] = count[i] + count[i-1]
+  cumulativeCount[0] = count[0]
+  for (let i = 1; i < count.length; i++) {
+    cumulativeCount[i] = count[i] + cumulativeCount[i-1]
   }
 
-  cumulativeCount.unshift(0).pop() //shift right
+   //shift right
+  cumulativeCount.pop()
+  cumulativeCount.unshift(0)
+
+
   startingIndex = cumulativeCount
 
   //finally loop through the data and place the elements in the right place
-  for (const e in arr)
-  {
-    const indexToinsert = startingIndex[e % 10**digit]
-    result[indexToinsert] = e
-    startingIndex[e % 10**digit]++
-  }
+  arr.forEach(element => {
+    const indexToinsert = startingIndex[element % 10**digit]
+    result[indexToinsert] = element
+    startingIndex[element % 10**digit]++
+  })
 
   return result
 
 
 }
 
-module.exports = LinkedList;
+module.exports = rs;

@@ -1,5 +1,7 @@
 //account for the head pointer
 // you MUST implement like this... There is a lot going on...
+// each element is called a node by convention
+// the payload is called data by convention
 // the pointer, by convention, is called next.
 
 

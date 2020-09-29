@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it adds 1`] = `
+Queue {
+  "data": Array [
+    "a",
+    "b",
+    "c",
+    "d",
+  ],
+}
+`;
+
+exports[`it pops 1`] = `
+Queue {
+  "data": Array [
+    "b",
+    "c",
+    "d",
+  ],
+}
+`;

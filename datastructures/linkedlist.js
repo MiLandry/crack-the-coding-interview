@@ -5,6 +5,17 @@
 // the pointer, by convention, is called next.
 
 
+
+
+
+
+
+
+
+
+
+
+
 class LinkedListNode
 {
   constructor(data)

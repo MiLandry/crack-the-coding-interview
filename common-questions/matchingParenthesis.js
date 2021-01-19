@@ -57,7 +57,6 @@ function isParethesisBalanced(str)
         }
         if (closeToOpening[c])
         {
-            // console.log('stack', stack);
             if (stack.pop() !== closeToOpening[c])
             {
                 return false
@@ -65,7 +64,6 @@ function isParethesisBalanced(str)
         }
     }
     return stack.length === 0
-
 }
 
 

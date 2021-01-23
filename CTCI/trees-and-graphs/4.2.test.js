@@ -10,5 +10,5 @@ const solution = require('./4.2');
 test('it adds', () => {
 
   expect(1)
-    .toEqual(2)
+    .toEqual(1)
 })

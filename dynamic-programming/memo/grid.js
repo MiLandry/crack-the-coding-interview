@@ -5,6 +5,7 @@ const memo = {}
 
 const grid = (m,n) => {
   const key = m + ',' + n
+  if (key in memo) return memo[key]
 
   if (m === 0) {
     memo[key] = 0

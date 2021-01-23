@@ -41,7 +41,7 @@ const cansum = (s, arr) => {
       if (memo[key]) return true
     }
   }
-
+  memo[key] = false
   return false
 
 }

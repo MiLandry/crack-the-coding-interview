@@ -29,21 +29,19 @@ const maximized = (arr, k, memo = {}) => {
 
     const sums = new Array(n).fill(null)
     for (let i = 1; i < n; i++) {
-      const leftPartition = Math.min(...arr.slice(0,i))
-      const rightPartition = maximized(arr.slice(i), k-1)
-      if (rightPartition !== null) {
-        sums[i] = leftPartition + rightPartition
+      const leftPartitionAddend = Math.min(...arr.slice(0,i))
+      const remainingPartitionsAddend = maximized(arr.slice(i), k-1, memo)
+      if (remainingPartitionsAddend !== null) {
+        sums[i] = leftPartitionAddend + remainingPartitionsAddend
       }
 
 
     }
-    memo[key] = Math.max(...sums.filter(e => e))
+    memo[key] = Math.max(...sums.filter(e => e)) // filter removes nulls
     return memo[key]
 
 
 }
-
-console.log(maximized([6, 5, 3, 8, 9, 10, 4, 7, 10], 4))
 
 module.exports = maximized
 
